@@ -1,0 +1,44 @@
+        body{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0tN9t7HANeOBQAe0zglQWTjMEysyEWdos8EDt4Ys13hqToPAxjCHvqvE&s=10);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container{
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 40px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+            font-weight:bolder;
+            color:white;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        }
+    
+        h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color:rgb(227, 213, 213)
+        }
+        td{
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+    
+        input{
+            width:100px;
+            padding: 2px;
+            border:1px solid black;
+            background-color: #c09797;
+            border-radius: 5px;
+            background-color: #d0bcbc;
+        }
+        div{
+           // background-color: #d38585;
+        }
+        button{
+            border-radius: 5px;
+            margin-left: 150px;
+            background-color: #b4a0af;
+        }
