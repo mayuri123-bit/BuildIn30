@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css_positioning</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        .main{
+            background-color:white;
+            width:100vw;
+            height:100vh;
+            position:relative;
+        }
+        .main:hover .sub1{
+            position: absolute;
+            background-color: transparent;
+            border: 10px solid red;            
+            transform: rotate(-10deg);
+            color: red;
+            left:8vw;
+            
+        }
+        .main:hover .sub2{
+            position:absolute;
+            background-color: transparent;
+            border: 10px solid rgb(49, 148, 44);
+            transform: rotate(10deg);
+            color: rgb(95, 170, 60);
+
+        }
+        .main:hover .sub3{
+            position: absolute;
+            background-color: transparent;
+            border: 10px solid rgb(26, 47, 169);            
+            transform: rotate(-8deg);
+            color: rgb(106, 51, 224);
+            right: 30vw;
+        }
+        .main:hover .sub4{
+            position: absolute;
+            background-color: transparent;
+            border: 10px solid rgb(241, 224, 36);            
+            transform: rotate(-1deg);
+            color: rgb(208, 232, 27);
+            right: 10vw;
+        }
+        .logo{
+            position: fixed;
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            margin: 0;
+            border:1px solid black;
+            border-radius: 60px;
+            border-style: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 200px;
+            font-weight: 500;
+            color: aliceblue;
+            font-style: oblique;
+            transition: all 1s ease-in-out;
+        }
+
+        .sub1{
+            position: absolute;
+            background-color: red;
+            width:20vw;
+            height: 40vh;
+            left:4vw;
+            top:30vh;
+        }
+        .sub2{
+            position: absolute;
+            background-color: rgb(44, 251, 41);
+            width:20vw;
+            height: 40vh;
+            left:28vw;
+            top:30vh;     
+        }
+        .sub3{
+            position: absolute;
+            background-color: rgb(26, 134, 250);
+            width:20vw;
+            height: 40vh;
+            right:28vw;
+            top:30vh;     
+        }
+        .sub4{
+            position: absolute;
+            background-color: rgb(242, 224, 21);
+            width:20vw;
+            height: 40vh;
+            right:4vw;
+            top:30vh;
+        }
+        .headline{
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            padding: 80vh;
+            left:15vh;
+            font-variant-position: sub;
+            letter-spacing: 20px;
+
+        }
+        .main2{
+            background-color: rgb(152, 239, 239);
+            height: 100vh;
+            width: 100vw;
+            position:relative;
+        }
+
+        .main2:hover .ending{
+            position: absolute;
+            font-size: large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(23, 81, 126);
+            font-weight: bolder;
+            padding: 40vh 25vw;
+            transition: all 1s ease-in-out;
+
+        } 
+        .ending{
+            color: blue;
+        } 
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="logo">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/ZOHO_logo_2023.svg/960px-ZOHO_logo_2023.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20231106145651" width="100px" height="50px"  alt="">
+    </div>
+        <div class="box sub1">Z</div>
+        <div class="box sub2">O</div>
+        <div class="box sub3">H</div>
+        <div class="box sub4">O</div>
+        <div class="headline">
+         <h1>Z O H O</h1>
+    </div>
+    </div>
+ 
+    <div class="main2">
+        <div class="ending">
+            <h1>Thank You For Checking My Logo</h1>
+        </div>
+    </div>
+</body>
+</html>
