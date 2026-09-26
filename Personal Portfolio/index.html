@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .main{
+            background-color: #f8c191;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .sub1{
+            position: absolute;
+            background-color: white;
+            width: 70vw;
+            height: 80vh;
+            margin-left: 20vw;
+            margin-top: 10vh;
+            border-radius: 90px 2px 90px 2px;
+
+        }
+        .sub2{
+            background-color:  #f8c191;
+            position: absolute;
+            height: 70vh;
+            width: 28vw;
+            left:25vw;
+            margin-top: 15vh;
+            border-radius: 90px 5px 90px 5px;
+        }
+        .sub2 h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(20, 20, 20);
+            font-size: xx-large;
+            font-weight: bolder;
+            padding-left: 20px;
+            padding-top: 130px;
+        }
+        .sub2 span{
+            color: rgb(191, 23, 23);
+        }
+        button{
+            background-color: chocolate;
+            border-radius: 2px solid black;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 130px;
+            margin-top: 20px;
+            padding: 10px;
+            font-weight: 200;
+        }
+        .sub3{
+            background-color: #f8c191;
+            position: absolute;
+            height: 70vh;
+            width: 28vw;
+            right:15vw;
+            margin-top: 15vh;
+            border-radius: 90px 5px 90px 5px;
+        }
+        
+        .sub4{
+            display: none;
+            background-color:  #f8c191;
+            position: absolute;
+            height: 70vh;
+            width: 28vw;
+            right:15vw;
+            margin-top: 15vh;
+            border-radius: 90px 5px 90px 5px;
+        }
+        img{
+            height: 400px;
+            width: 350px;
+            border-radius: 90px 5px 90px 5px;
+
+        }
+        .adjustimg{
+            height: 350px;
+            width: 350px;
+
+        }
+   
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sub1 whitebk"></div>
+        <div class="sub2" id="block1"><h1>HI ,I'm Mayuri Narwade <span>Web-Developer</span></h1>
+        <button class="b1" onclick="clickevent()">Explore</button>
+        </div>
+        <div class="sub3" id="block2">
+            <img src="WhatsApp Image 2026-06-16 at 7.33.03 PM (1).jpeg" alt="">
+        </div>
+        <div class="sub4" id="onclicking">
+            <img src="mern.png" alt="" class="adjustimg">
+            <button class="backb2" id="back" onclick="back()"> ← BACK</button>
+        </div>
+    </div>
+</body>
+<script>
+      let originalcontentblock1=document.getElementById("block1").innerHTML;
+        function clickevent(){
+        document.getElementById("block2").style.display="none"
+        document.getElementById("onclicking").style.display="block"
+        document.getElementById("block1").innerHTML="<h1>I am a Full Stack Engineer focused on building modern web apps using MongoDB, Express, React, and Node.js.</h1>"
+    }
+    function back(){
+         document.getElementById("onclicking").style.display="none"
+         document.getElementById("block2").style.display="block"
+         document.getElementById("block1").innerHTML=originalcontentblock1;
+    }
+</script>
+</html>
