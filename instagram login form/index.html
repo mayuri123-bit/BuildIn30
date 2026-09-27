@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginform</title>
+    
+
+</head>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .loginform {
+        width: 100vw;
+        height: 100vh;
+    }
+    .block1{
+        background-color: rgb(232, 245, 245);
+        width: 30vw;
+        height: 88vh;
+        margin-left: 35vw;
+        margin-top: 5vh;
+        position: relative;
+    }
+    .heading{
+        position: absolute;
+        margin-left: 9vw;
+        margin-top: 10vh;
+    }
+    .inputs {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 22vh;
+        margin-left: 10px;
+        align-items: center;
+
+    }
+    input , button{
+        padding: 8px;
+        margin-top: 10px;
+        width: 28vw;
+        border-radius: 1px solid rgb(221, 215, 215);
+    }
+ 
+    button{
+        background-color: rgb(39, 86, 194);
+        font-weight: 200;
+        font-style: normal;
+        color: aliceblue;
+        cursor: pointer;
+    }
+    a{
+        color: rgb(58, 103, 208);
+    }
+    hr{
+        color: rgb(47, 49, 49);
+        width: 30vw;
+    }
+    span{
+        color: red;
+    }
+    #fb{
+        font-weight: bolder;
+        color: blue;
+    }
+</style>
+<body>
+    <div class="loginform">
+        <div class="block1">
+            <div class="heading"> 
+                <img src="logoname.png" width="180px" height="60px" alt="">
+            </div>
+            <div class="form">
+                <form onsubmit="return submitForm()">
+                    <div class="inputs">
+                    <input type="text" id="number" id="username" placeholder="Phone number,email/ username">
+                    <span id="username1"> </span>
+                    <input type="password" id="password" placeholder="Password" >
+                    <span id="password1"> </span>
+                    <button>Log in</button>
+                    <br>
+                    <p>Forget your login details ? <span><a href="help.html">Get help in log in.</a> </span></p>
+                    <Br><hr><br>
+                    <h6>OR</h6><br>
+                    <a href="https://www.facebook.com/login/" id="fb">Log in with Facebook</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    function submitForm(){
+        let Username=document.getElementById("username").value;
+        let Userpassword=document.getElementById("password").value;
+        if(Username==""){
+            document.getElementById("username1").innerHTML="Username Not Entered";
+            return false;
+        }
+        else{
+          document.getElementById("username1").innerHTML=" ";
+        }
+        if(isNaN(Userpassword)){
+            document.getElementById("password1").innerHTML="Invalid Numbers Password enter correctly "
+            return false;
+        }
+        else if(Userpassword==""){
+            document.getElementById("password1").innerHTML="Password Not Entered";
+            return false;
+        }
+        else {
+            document.getElementById("password1").innerHTML=" ";
+        }
+        alert("Form submitted sucuessfully!");
+        return true;
+    }
+
+</script>
+</html>
