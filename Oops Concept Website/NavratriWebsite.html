@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            min-height: 100vh;
+            background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREmmuyXnH6BxVQTJU7SvOnCRMOAcG6OrThKGW1KD6p7w&s=10");
+            background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREmmuyXnH6BxVQTJU7SvOnCRMOAcG6OrThKGW1KD6p7w&s=10");
+            background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREmmuyXnH6BxVQTJU7SvOnCRMOAcG6OrThKGW1KD6p7w&s=10");
+            background-size:38.33vh 100%;
+            background-postion:left center ,center center, right center;
+        
+        }
+
+        h1{
+            background-color: #99ea9c;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top:20vh;
+            space-between: 30px;
+        }
+        button{
+            background-color: #99ea9c;
+            border-radius: 10px;
+            padding: 10px 20px;
+        }
+        #text{
+            padding: 10px 45px;
+            border-radius: 10px;
+            width: 300px;
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        h1{
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+            font-size: 30px;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+        }
+        #qrcode{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <h1>Qr Code  For Navratari partitioner</h1>
+         <input type="text" id="text" placeholder="Enter Garba Partitioner Name"><br><br>
+         <button onclick="getQRcode()">Generate QR code</button>
+         <div id="qrcode">here</div>
+     </div>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+    function getQRcode(){
+    let textt=document.getElementById("text").value;
+      if(textt.trim() !== ""){
+            let box=document.getElementById("qrcode");
+            box.innerHTML="";
+            new QRCode(box,{
+                text:textt,
+                width:200,
+                height:200});
+        }
+    }
+</script>
+</html>
