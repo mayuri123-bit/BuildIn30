@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API - Random User</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #getuser {
+            width: 320px;
+            padding: 25px;
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        #getuser img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        #getuser h2 {
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Random User</h1>
+    <div id="getuser">
+
+    </div>
+    <button onclick="getdata()">Get User</button>
+<script>
+        async function getdata() {
+            try {
+                let container = document.getElementById("getuser");
+                let response = await fetch(
+                    'https://randomuser.me/api/?results=2'
+                );
+                let data = await response.json();
+                let userdata = data.results[0];
+                let Titlename = `${userdata.name.first} ${userdata.name.last}`;
+                let image = userdata.picture.medium;
+                container.innerHTML = `<img src="${image}" alt="user image"> <br> <h2>${Titlename}</h2>`;
+            }
+             catch {
+                console.log("error");
+                document.write("Unable to fetch data");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
